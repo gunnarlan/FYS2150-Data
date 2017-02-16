@@ -56,7 +56,7 @@ Time and Frequency}
 \maketitle
 \begin{abstract}
 \begin{center}
-We present three methods to measure the oscillatory period of a simple pendulum (by measuring its length, by measuring with a stopwatch and by measuring with a photodiode) and two methods to measure the time taken for an hourglass to  elapse (by a pendulum and by a stopwatch). We compare these methods, both on their accuracy and on their precision. We find that the photodiode gives the lowest uncertainty for measuring the period of a pendulum, whereas a stopwatch gives the lowest uncertainty for measuring an hourglass. We find good agreement between our results in general, but note that the amplitude of the pendulum must be kept within certain limits to be reliable, and that the hourglass appears to have a slight asymmetry between the two bulbs.
+We present three methods to measure the oscillatory period of a simple pendulum (by measuring its length, by measuring with a stopwatch and by measuring with a photodiode) and two methods to measure the time taken for an hourglass to  elapse (by a pendulum and by a stopwatch). We compare these methods, both on their accuracy and on their precision. We find that the photodiode gives the lowest uncertainty for measuring the period of a pendulum, whereas a stopwatch gives the lowest uncertainty for measuring an hourglass. We find good agreement between our results in general, but note that the amplitude of the pendulum must be kept within certain limits to be reliable, and that the hourglass appears to have a slight asymmetry between the two bulbs. All raw data from these experiments are available on our \href{https://github.com/gunnarlan/FYS2150-Data/tree/Report1-Time-and-frequency/Report1/Experiment/Experimental_Data}{GIT-page.}\footnote{\url{https://github.com/gunnarlan/FYS2150-Data/tree/Report1-Time-and-frequency/Report1/Experiment/Experimental_Data}}
 \end{center}
 \end{abstract}
 \section{Introduction}
@@ -67,7 +67,7 @@ Subsequently, we investigate the period of the simple pendulum directly. We comp
 We first introduce the theory necessary for these experiments. We continue with a brief discussion of the methods. Then, we present the results, and finish with a comparison of the attained values and a discussion of the uncertainties and errors in the experiment
 \section{Theory}
 \subsection{Theoretical period of a simple pendulum}
-A simple pendulum consists of a heavy mass (the pendulum 'bob'), attached to a string. This string is then attached to a suspension point, from which the bob can swing freely. In the idealized case that the mass of the string is utterly negligible and a small initial angular displacement from the minimum position, it can be shown that \textbf{REFERENCE} the period of the pendulum only depends on the length from the suspension point to the center of mass of the bob, $L$ and the gravitational acceleration, $g$, according to the formula:s
+A simple pendulum consists of a heavy mass (the pendulum 'bob'), attached to a string. This string is then attached to a suspension point, from which the bob can swing freely. In the idealized case that the mass of the string is utterly negligible and a small initial angular displacement from the minimum position, it can be shown that (see \cite{pendulum}) the period of the pendulum only depends on the length from the suspension point to the center of mass of the bob, $L$ and the gravitational acceleration, $g$, according to the formula:s
 \begin{equation}\label{eq:Period_of_pendulum}
 T\approx2\pi \sqrt{\frac{L}{g}}
 \end{equation}
@@ -120,7 +120,9 @@ The Hulafors folding ruler had a stated uncertainty of $1$ mm per meter, and an 
 \linebreak
 We observed that it was difficult to pin down the exact number of oscillations of the pendulum before the hourglass elapsed, and two counters disagreed slightly. It was also difficult to estimate anything below half a period. Therefore, the uncertainty in the number of periods taken before the hourglass elapsed was set to 1.\\
 \linebreak
-Wherever multiple measurements were performed, we set the uncertainty equal to the uncertainty of the mean (standard deviation of the measurements, divided by the square root of the number of measurements). These can then be compared.
+Wherever multiple measurements were performed, we set the uncertainty equal to the uncertainty of the mean (standard deviation of the measurements, divided by the square root of the number of measurements). These can then be compared.\\
+\linebreak
+Finally, in the case of equation \ref{eq:Period_of_pendulum}, we use standard error propagation. 
 \section{Results}
 \subsection{Results from the measurement of time by means of a pendulum}\label{results_pendulum_length}
 The physical parameters of the pendulum, including their uncertainties, are presented in appendix \ref{ap:physical_parameters}. In table \ref{tab:time_measurement_pendulum} below, we present the number of times the bob passed it equilibrium point prior to the elapsing of the hourglass.\\
@@ -147,18 +149,18 @@ Note, however, that this is the number of equilibrium passes, rather than the nu
 $$\bar{P}=114.5 \pm 0.5$$
 The effective length of the pendulum, $L$ is computed from table \ref{tab:physical_parameters_of_pendulum} in appendix \ref{ap:physical_parameters} to be:
 $$L=58.5 \pm 0.4 \ \mathrm{cm}$$
-Where a closer explanation of the uncertainty can be found in appendix \ref{ap:uncertainty_in_length}. The appropriate value for the gravitational constant $g$ can be found \textbf{REFERENCE} to be:
-$$g = 9.825\ \mathrm{m s^{-2}}$$
+Where a closer explanation of the uncertainty can be found in appendix \ref{ap:uncertainty_in_length}. The appropriate value for the gravitational constant $g$ can be found in \cite{gravity} to be:
+$$g = 9.819\ \mathrm{m s^{-2}}$$
 Where we assume that the uncertainty in this value is insignificant. 
 The theoretical period, $T$ of the pendulum is then, using equation \ref{eq:Period_of_pendulum}:
-$$T=1.533 \pm 0.005 \ \mathrm{s}$$
+$$T=1.534 \pm 0.005 \ \mathrm{s}$$
 So that the average time taken by the hourglass, $\bar{t}_1$ is, with this method, given by:
 $$\bar{t}_1=176 \pm 1\ \mathrm{s}$$
 \subsubsection{Qualitative observations}
 We note that,as shown in figure \ref{fig:Experiment_setup1}, the pendulum is suspended at the points. This made the estimation of the suspension point somewhat tricky, as it was not entirely certain that the pendulum was even level. It was also difficult to precisely estimate where in its trajectory the pendulum started as we turned the hourglass. Therefore, we decided to count equilibrium passes, rather than maxima, to count twice per oscillation. 
 \subsection{Results from the measurement of time by means of a stopwatch}
 \subsubsection{Results from measuring the period of a pendulum using a stopwatch}
-The results from our measurements of the period of our pendulum, using a stopwatch, are shown in figure \ref{fig:Experiment_2} below. The raw data can be found on our \textbf{GITHUB}.
+The results from our measurements of the period of our pendulum, using a stopwatch, are shown in figure \ref{fig:Experiment_2} below. The raw data can be found on our \href{https://github.com/gunnarlan/FYS2150-Data/tree/Report1-Time-and-frequency/Report1/Experiment/Experimental_Data}{GIT-page.}\footnote{\url{https://github.com/gunnarlan/FYS2150-Data/tree/Report1-Time-and-frequency/Report1/Experiment/Experimental_Data}}.
 \begin{figure}[ht!]
 \centering
 \includegraphics[scale=0.7]{Experiment2.png}
@@ -168,7 +170,7 @@ This gives the average period of the pendulum,$\bar{T}_2$ as:
 $$\bar{T}_2=1.54  \pm 0.07 \ \mathrm{s}$$
 \newpage
 \subsubsection{Results from the measurement of the time taken for an hourglass to elapse using a stopwatch}
-The raw data for the measurements of the hourglass using the stopwatch are found on our \textbf{GITHUB}. The histogram of this is shown below:
+The raw data for the measurements of the hourglass using the stopwatch are also found on our \href{https://github.com/gunnarlan/FYS2150-Data/tree/Report1-Time-and-frequency/Report1/Experiment/Experimental_Data}{GIT-page.}\footnote{\url{https://github.com/gunnarlan/FYS2150-Data/tree/Report1-Time-and-frequency/Report1/Experiment/Experimental_Data}}. The histogram of this is shown below:
 \begin{figure}[ht!]
 \centering
 \includegraphics[scale=0.7]{Experiment2_2.png}
@@ -219,6 +221,7 @@ Large amplitude, high sampling frequency, $T_{lh}$ & $1.5566 \pm 0.0008\ \mathrm
 \hline 
 \end{tabular}
 \end{table}
+The raw data for these experiments is available from our \href{https://github.com/gunnarlan/FYS2150-Data/tree/Report1-Time-and-frequency/Report1/Experiment/Experimental_Data}{GIT-page.}\footnote{\url{https://github.com/gunnarlan/FYS2150-Data/tree/Report1-Time-and-frequency/Report1/Experiment/Experimental_Data}}
 \subsubsection{Qualitative observations} \label{photodiode_qualitat}
 We tested a multitude of positions for the diode, relative to the trajectory of the pendulum. At the top of the trajectory, the photodiode sometimes failed to register an oscillation, as the amplitude decreased slightly with time. Further down, the photodiode would sometimes register an oscillation twice(once on the way up and once on the way down). It was therefore decided to place the sensor near the bottom point of the pendulum. This was no problem, as long as the sampling frequency was large enough.
 \section{Discussion}
@@ -259,7 +262,8 @@ There is quite some room for future investigation in this experiment. In particu
 \linebreak
 It may also be of further interest to investigate the asymmetry of the hourglass, if this is indeed the explanation of the data. If so, then it may be necessary to mark the hourglass, to distinguish the two sides, before it can be used as an accurate time-taking device.
 \pagebreak
-
+\bibliography{Report1}{}
+\bibliographystyle{plain}
 
 
 
