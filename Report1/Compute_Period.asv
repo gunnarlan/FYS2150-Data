@@ -1,6 +1,0 @@
-title('Period of oscillation for large amplitude and a sampling frequency of 25000 Hz');
-hold on;
-xlabel('Period of pendulum, t [s]');
-ylabel('Absolute frequency');
-x=linspace(0, 180, len(periods))
-

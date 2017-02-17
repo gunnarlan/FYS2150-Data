@@ -2,8 +2,11 @@
 
 \bibitem{gravity}
 {Gravity of Earth}.
+\newblock Available at {https://en.wikipedia.org/wiki/Gravity{\_}of{\_}Earth}.
 
 \bibitem{pendulum}
 {Simple pendulum}.
+\newblock Available at
+  \url{http://hyperphysics.phy-astr.gsu.edu/hbase/pend.html}.
 
 \end{thebibliography}
