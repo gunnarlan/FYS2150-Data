@@ -1,0 +1,11 @@
+function FWHM = fwhm(telling, start, stopp)
+delta = stopp-start;
+a = delta(2)/delta(1);
+b = start(2)-start(1)*a;
+x = 1:1:length(telling);
+X = start(1):1:stop(1);
+T = telling;
+T(T<start(1)) = 0;
+T(T>stopp(1)) = 0;
+T(X) = T(X)-(a*x+b);
+plot(T)

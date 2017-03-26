@@ -1,0 +1,100 @@
+\documentclass[a4paper,11pt, norsk, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+\usepackage[backend=biber, sortcites]{biblatex}
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage[usenames,dvipsnames,svgnames, table]{xcolor}
+\usepackage[font={scriptsize}]{caption}
+\usepackage{amsmath} \usepackage{amsthm} \usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{tikz} \usepackage{float}
+\usepackage[procnames]{listings}
+\usepackage{pstool} \usepackage{pgfplots}
+\usepackage{wrapfig} \usepackage{graphicx} \usepackage{epstopdf}
+\usepackage{afterpage}
+\usepackage{multirow}
+\usepackage{gensymb}
+\usepackage{algorithm}
+\usepackage{microtype}
+\usepackage[noend]{algpseudocode}
+\usepackage{matlab-prettifier} % After listings and xcolor
+\usepackage{xcolor,colortbl}
+\usepackage{microtype}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+
+\newcommand{\mc}[2]{\multicolumn{#1}{c}{#2}}
+\definecolor{Gray}{gray}{0.90}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+
+\newcolumntype{a}{>{\columncolor{Gray}}c}
+\newcolumntype{b}{>{\columncolor{white}}c}
+\definecolor{tablecolor}{gray}{0.95}
+\definecolor{tabletext}{gray}{0.0}
+\definecolor{tablerule}{gray}{0.7}
+\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+\definecolor{namecolor}{cmyk}{1,.50,0,.10} 
+
+
+% Commands from Karsten Trulsen
+\newcommand{\rmd}{{\mathrm{d}}}
+\newcommand{\oder}[2]{\frac{{\rm d}#1}{{\rm d}#2}}
+\newcommand{\odder}[2]{\frac{{\rm d}^2 #1}{{{\rm d}#2}^2}}
+\newcommand{\pd}[1]{\frac{\partial}{\partial{#1}}}
+\newcommand{\pdt}[2]{\frac{\partial{#1}}{\partial{#2}}}
+\newcommand{\pddt}[2]{\frac{\partial^2 #1}{\partial{#2^2}}}
+\newcommand{\pdddt}[3]{\frac{\partial^#3 #1}{\partial{#2^#3}}}
+\newcommand{\MatL}[1]{\texttt{\bf #1}}
+
+% Custom commands
+\newcommand{\unit}[1]{\:\mathrm{#1}}
+\newcommand{\noref}[1]{\hyperref[#1]{\ref*{#1}}}
+\newcommand{\nonref}[1]{\hyperref[]{\ref*{#1}}}
+\newcommand\blankpage{%
+  \null
+  \thispagestyle{empty}%
+  \addtocounter{page}{-1}%
+  \newpage}
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{7} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{7}  % for normal
+
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+\title{Prelab i elastisitet} \author{Erlend Lima\\ erlenlim}
+
+% Biber for references
+\addbibresource{references.bib}
+
+\begin{document}
+\maketitle
+\rowcolors{1}{tablecolor}{tablecolor}
+\arrayrulecolor{tablerule}
+
+\begin{enumerate}[1.]
+\item C
+\item A
+\item A
+\item D
+\item D
+\item A
+\item B
+\item D
+\item B
+\item B
+\end{enumerate}
+
+
+\end{document}

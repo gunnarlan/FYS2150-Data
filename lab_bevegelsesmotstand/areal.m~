@@ -1,0 +1,3 @@
+obj = imread('areal.png');
+gobj = rgb2gray(obj);
+bobj = im2bw(obj, 0.1);

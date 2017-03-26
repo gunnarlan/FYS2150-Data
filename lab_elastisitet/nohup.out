@@ -1,0 +1,42 @@
+
+Warning: due to a long standing Gtk+ bug
+http://bugzilla.gnome.org/show_bug.cgi?id=85715
+Emacs might crash when run in daemon mode and the X11 connection is unexpectedly lost.
+Using an Emacs configured with --with-x-toolkit=lucid does not have this problem.
+Loading cua-base...
+Loading cua-base...done
+Loading elec-pair...
+Loading elec-pair...done
+Loading paren...
+Loading paren...done
+[yas] Prepared just-in-time loading of snippets successfully.
+Warning (initialization): An error occurred while loading ‘/home/erdos/.emacs’:
+
+Symbol's function definition is void: TeX-source-correlate-mode
+
+To ensure normal operation, you should investigate and remove the
+cause of the error in your initialization file.  Start Emacs with
+the ‘--debug-init’ option to view a complete error backtrace.
+Starting Emacs daemon.
+Restarting server
+
+Warning: due to a long standing Gtk+ bug
+http://bugzilla.gnome.org/show_bug.cgi?id=85715
+Emacs might crash when run in daemon mode and the X11 connection is unexpectedly lost.
+Using an Emacs configured with --with-x-toolkit=lucid does not have this problem.
+Loading cua-base...
+Loading cua-base...done
+Loading elec-pair...
+Loading elec-pair...done
+Loading paren...
+Loading paren...done
+[yas] Prepared just-in-time loading of snippets successfully.
+Warning (initialization): An error occurred while loading ‘/home/erdos/.emacs’:
+
+Symbol's function definition is void: TeX-source-correlate-mode
+
+To ensure normal operation, you should investigate and remove the
+cause of the error in your initialization file.  Start Emacs with
+the ‘--debug-init’ option to view a complete error backtrace.
+Starting Emacs daemon.
+Restarting server
