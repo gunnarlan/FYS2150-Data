@@ -1,4 +1,6 @@
 function FWHM = fwhm(telling, start, stopp)
+stopp = [stopp telling(stopp)];
+start = [start telling(start)];
 delta = stopp-start;
 a = delta(2)/delta(1);
 b = start(2)-start(1)*a;
@@ -10,7 +12,8 @@ T(X) = T(X)-(a*X'+b);
 plot(T)
 
 hold on
-[maxvalue argmax] = max(T);
+[maxvalue, argmax] = max(T);
+argmax
 plot(argmax, maxvalue, 'o')
 lower = find(T>maxvalue/2, 1, 'first');
 higher = find(T>maxvalue/2, 1, 'last');
