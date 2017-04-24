@@ -1,0 +1,24 @@
+%% Utstyrliste til Balmer- og heliumlinje
+% Gitterkonstant til Balmerlinje; 30 000 lpi
+% Gitterkonsant til Heliumlinje: 15 000 lpi
+
+% Balmerlinjemålinger
+% Rød
+r = [180.0, 281.7]
+r_øvre = [180.0, 281.8]
+r_nedre = [179.9, 281.6]
+
+% Blå 
+b = [196.1, 266.2]
+b_øvre  = [196.1, 266.3]
+b_nedre = [196.0, 266.2]
+
+% Fiolett - Så ikke trådkors, prøvde å sentrere
+f = [201.1, 261.6]
+f_øvre = [201.5, 261.9]
+f_nedre = [199.6, 261.3]
+
+% Nøytrallinje
+n = [231.5]
+n_nedre = [231.4]
+n_øvre = [231.5]
