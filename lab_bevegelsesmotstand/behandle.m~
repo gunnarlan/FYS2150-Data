@@ -1,2 +1,0 @@
-obj = imread('ballongbilde.png');
-bobj = im2bw(obj, 0.8);
