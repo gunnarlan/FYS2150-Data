@@ -1,0 +1,190 @@
+\documentclass[a4paper,11pt, norsk, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+\usepackage[backend=biber, sortcites]{biblatex}
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage[usenames,dvipsnames,svgnames, table]{xcolor}
+\usepackage[font={scriptsize}]{caption}
+\usepackage{amsmath} \usepackage{amsthm} \usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{tikz} \usepackage{float}
+\usepackage[procnames]{listings}
+\usepackage{pstool} \usepackage{pgfplots}
+\usepackage{wrapfig} \usepackage{graphicx} \usepackage{epstopdf}
+\usepackage{afterpage}
+\usepackage{multirow}
+\usepackage{gensymb}
+\usepackage{algorithm}
+\usepackage{microtype}
+\usepackage[noend]{algpseudocode}
+\usepackage{matlab-prettifier} % After listings and xcolor
+\usepackage{xcolor,colortbl}
+\usepackage{microtype}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{pdfpages}
+
+
+\newcommand{\mc}[2]{\multicolumn{#1}{c}{#2}}
+\definecolor{Gray}{gray}{0.90}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+
+\newcolumntype{a}{>{\columncolor{Gray}}c}
+\newcolumntype{b}{>{\columncolor{white}}c}
+\definecolor{tablecolor}{gray}{0.95}
+\definecolor{tabletext}{gray}{0.0}
+\definecolor{tablerule}{gray}{0.7}
+\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+\definecolor{namecolor}{cmyk}{1,.50,0,.10} 
+
+
+% Commands from Karsten Trulsen
+\newcommand{\rmd}{{\mathrm{d}}}
+\newcommand{\onxdy}[3]{\frac{{\rm d}^{#1}#2}{{{\rm d}#3}^{#1}}}
+\newcommand{\oxdy}[2]{\frac{{\rm d} #1}{{{\rm d}#2}}}
+\newcommand{\odt}[1]{\oxdy{#1}{t}}
+\newcommand{\odx}[1]{\oxdy{#1}{x}}
+\newcommand{\oddt}[1]{\onxdy{2}{#1}{t}}
+\newcommand{\oddx}[1]{\onxdy{2}{#1}{x}}
+% General partial derivation
+\newcommand{\pnxdy}[3]{\frac{\partial^{#1}#2}{\partial {#3}^#1}}
+\newcommand{\pxdy}[2]{\frac{\partial #1}{\partial #2}}
+% Partial derivation with respect to t
+\newcommand{\pdt}[1]{\pxdy{#1}{t}}
+\newcommand{\pddt}[1]{\pnxdy{2}{#1}{t}}
+% Partial derivation with respect to x
+\newcommand{\pdx}[1]{\pxdy{#1}{x}}
+\newcommand{\pddx}[1]{\pnxdy{2}{#1}{x}}
+% Math l
+\newcommand{\MatL}[1]{\texttt{\bf #1}}
+% Quantum Mechanics
+\newcommand{\schrodinger}{i\hbar\pdt{\Psi} = -\frac{\hbar^{2}}{2m}\pddx{\Psi} + V\Psi}
+\newcommand{\schrodingera}{i\hbar\pdt{\Psi} &= -\frac{\hbar^{2}}{2m}\pddx{\Psi} + V\Psi}
+\newcommand{\skrodinger}{Schrödinger}
+\newcommand{\Psis}{\Psi^{*}}
+\newcommand{\Psif}{\Psi (x,t)}
+\newcommand{\sandwich}[1]{\int\Psis #1\Psi\: \rmd x}
+\newcommand{\bracket}[1]{\langle #1 \rangle}
+\newcommand{\pop}{\frac{\hbar}{i}\odx{ }}
+\DeclareMathOperator\erf{erf}
+% Custom commands
+\newcommand{\unit}[1]{\:\mathrm{#1}}
+\newcommand{\noref}[1]{\hyperref[#1]{\ref*{#1}}}
+\newcommand{\nonref}[1]{\hyperref[]{\ref*{#1}}}
+\newcommand\blankpage{%
+  \null
+  \thispagestyle{empty}%
+  \addtocounter{page}{-1}%
+  \newpage}
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{7} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{7}  % for normal
+
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+\newcommand{\suba}{\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}}
+\newcommand{\subxi}{\sqrt{\frac{m\omega}{\hbar}}x}
+
+\title{Prelab Braggdiffraksjon i FYS2150} \author{Erlend Lima\\ erlenlim}
+
+% Biber for references
+\addbibresource{references.bib}
+
+\begin{document}
+\maketitle
+\rowcolors{1}{tablecolor}{tablecolor}
+\arrayrulecolor{tablerule}
+\begin{enumerate}[1.]
+\item D
+\item B
+\item D
+\item B
+\item D
+\item B
+\item C
+\item A. Matlabskriptet er
+  \lstdefinelanguage{Julia}%
+  {morekeywords={abstract,break,case,catch,const,continue,do,else,elseif,%
+      end,export,false,for,function,immutable,import,importall,if,in,%
+      macro,module,otherwise,quote,return,switch,true,try,type,typealias,%
+      using,while},%
+    sensitive=true,%
+    alsoother={$},%
+    morecomment=[l]\#,%
+    morecomment=[n]{\#=}{=\#},%
+    morestring=[s]{"}{"},%
+    morestring=[m]{'}{'},%
+  }[keywords,comments,strings]%
+
+  \lstset{%
+    language        = Julia,
+    extendedchars   = true, % Så æøå blir riktige!
+    basicstyle      = \footnotesize\ttm, % Bruk mindre skrift.
+    numbers         = left,             % Vi vil ha linjenumre,
+    numberstyle     = \tiny\ttm,        % men små.
+    showstringspaces= false,   % Vi ønsker vanlige blanke.
+    inputencoding   = utf8,
+    commentstyle    = \color{gray},
+    breaklines      = true,
+    backgroundcolor = \color{gray!10},
+    keywordstyle    = \color{blue},
+    stringstyle     = \color{ForestGreen},
+    postbreak       = \raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}},
+    emphstyle       = \ttb\color{red},    % Custom highlighting style
+    literate=  {á}{{'a}}1 {é}{{'e}}1 {í}{{'i}}1 {ó}{{'o}}1 {ú}{{'u}}1
+    {Á}{{'A}}1 {É}{{'E}}1 {Í}{{'I}}1 {Ó}{{'O}}1 {Ú}{{'U}}1
+    {à}{{`a}}1 {è}{{`e}}1 {ì}{{`i}}1 {ò}{{`o}}1 {ù}{{`u}}1
+    {À}{{`A}}1 {È}{{'E}}1 {Ì}{{`I}}1 {Ò}{{`O}}1 {Ù}{{`U}}1
+    {ä}{{"a}}1 {ë}{{"e}}1 {ï}{{"i}}1 {ö}{{"o}}1 {ü}{{"u}}1
+    {Ä}{{"A}}1 {Ë}{{"E}}1 {Ï}{{"I}}1 {Ö}{{"O}}1 {Ü}{{"U}}1
+    {â}{{\^a}}1 {ê}{{\^e}}1 {î}{{\^i}}1 {ô}{{\^o}}1 {û}{{\^u}}1
+    {Â}{{\^A}}1 {Ê}{{\^E}}1 {Î}{{\^I}}1 {Ô}{{\^O}}1 {Û}{{\^U}}1
+    {œ}{{\oe}}1 {Œ}{{\OE}}1 {æ}{{\ae}}1 {Æ}{{\AE}}1 {ß}{{\ss}}1
+    {ű}{{\H{u}}}1 {Ű}{{\H{U}}}1 {ő}{{\H{o}}}1 {Ő}{{\H{O}}}1
+    {ç}{{\c c}}1 {Ç}{{\c C}}1 {ø}{{\o}}1 {å}{{\r a}}1 {Å}{{\r A}}1
+    {€}{{\euro}}1 {£}{{\pounds}}1 {«}{{\guillemotleft}}1
+    {»}{{\guillemotright}}1 {ñ}{{\~n}}1 {Ñ}{{\~N}}1 {¿}{{?`}}1
+    {Δ}{{$\Delta$}}1 {ø}{{\o}}1 {ω}{{$\omega$}}1  {ϵ}{{$\epsilon$}}1 {σ}{{$\sigma$}}1
+  }\lstloadlanguages{Python}
+  \lstset{language=Matlab,
+    extendedchars=true, % Så æøå blir riktige!
+    basicstyle=\footnotesize\ttm, % Bruk mindre skrift.
+    numbers=left,             % Vi vil ha linjenumre,
+    numberstyle=\tiny\ttm,        % men små.
+    showstringspaces=false,   % Vi ønsker vanlige blanke.
+    inputencoding=utf8,
+    commentstyle=\color{gray},
+    breaklines=true,
+    backgroundcolor=\color{gray!10},
+    keywordstyle=\color{blue},
+    stringstyle=\color{ForestGreen},
+    postbreak=\raisebox{0ex}[0ex][0ex]{\ensuremath{\color{red}\hookrightarrow\space}},
+    emphstyle=\ttb\color{red},    % Custom highlighting style
+    literate={å}{{'a}}1 {æ}{{\~a}}1 {Å}{{\r{A}}}1 {Δ}{{$\Delta$}}1 {ø}{{\o}}1 {ω}{{$\omega$}}1, 
+    morekeywords={meshgrid, zeros, size, cos, sin, quiver, hold, xlabel,
+      ylabel, grid, axis, linspace, contour, colormap}}
+\begin{lstlisting}
+function [f] = relfaktor(U)
+e = 1.6021766*10^-19;
+h = 6.626070*10^-34;
+m = 9.109384*10^-31;
+c = 299792458;
+f = sqrt(1./(1+e*U./(2*m*c^2)));z
+\end{lstlisting}
+\item C
+\item C
+\end{enumerate}
+
+
+\end{document}

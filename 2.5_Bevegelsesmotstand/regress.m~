@@ -1,0 +1,10 @@
+function lmfit = regress(x, y, model, xname, yname)
+if nargin < 5:
+    yname = 'y';
+elseif nargin < 4:
+    xname = 'x';
+elseif nargin < 3:
+    model = 'x~y';
+end
+df = table(x, y, 'VariableNames', {xname, yname});
+lmfit = fitlm(df, model);

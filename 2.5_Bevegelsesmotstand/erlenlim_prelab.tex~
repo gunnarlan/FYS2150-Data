@@ -1,0 +1,134 @@
+\documentclass[a4paper,11pt, norsk, twoside]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[norsk]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{csquotes}
+\usepackage[backend=biber, sortcites]{biblatex}
+\usepackage{url}
+\usepackage{textcomp}
+\usepackage[usenames,dvipsnames,svgnames, table]{xcolor}
+\usepackage[font={scriptsize}]{caption}
+\usepackage{amsmath} \usepackage{amsthm} \usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{enumerate}
+\usepackage{tikz} \usepackage{float}
+\usepackage[procnames]{listings}
+\usepackage{pstool} \usepackage{pgfplots}
+\usepackage{wrapfig} \usepackage{graphicx} \usepackage{epstopdf}
+\usepackage{afterpage}
+\usepackage{multirow}
+\usepackage{gensymb}
+\usepackage{algorithm}
+\usepackage{microtype}
+\usepackage[noend]{algpseudocode}
+\usepackage{matlab-prettifier} % After listings and xcolor
+\usepackage{xcolor,colortbl}
+\usepackage{microtype}
+\usepackage{geometry}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{caption}
+\usepackage{subcaption}
+
+
+\newcommand{\mc}[2]{\multicolumn{#1}{c}{#2}}
+\definecolor{Gray}{gray}{0.90}
+\definecolor{LightCyan}{rgb}{0.88,1,1}
+
+\newcolumntype{a}{>{\columncolor{Gray}}c}
+\newcolumntype{b}{>{\columncolor{white}}c}
+\definecolor{tablecolor}{gray}{0.95}
+\definecolor{tabletext}{gray}{0.0}
+\definecolor{tablerule}{gray}{0.7}
+\definecolor{titlepagecolor}{cmyk}{1,.60,0,.40}
+\definecolor{namecolor}{cmyk}{1,.50,0,.10} 
+
+
+% Commands from Karsten Trulsen
+\newcommand{\rmd}{{\mathrm{d}}}
+\newcommand{\onxdy}[3]{\frac{{\rm d}^{#1}#2}{{{\rm d}#3}^{#1}}}
+\newcommand{\oxdy}[2]{\frac{{\rm d} #1}{{{\rm d}#2}}}
+\newcommand{\odt}[1]{\oxdy{#1}{t}}
+\newcommand{\odx}[1]{\oxdy{#1}{x}}
+\newcommand{\oddt}[1]{\onxdy{2}{#1}{t}}
+\newcommand{\oddx}[1]{\onxdy{2}{#1}{x}}
+% General partial derivation
+\newcommand{\pnxdy}[3]{\frac{\partial^{#1}#2}{\partial {#3}^#1}}
+\newcommand{\pxdy}[2]{\frac{\partial #1}{\partial #2}}
+% Partial derivation with respect to t
+\newcommand{\pdt}[1]{\pxdy{#1}{t}}
+\newcommand{\pddt}[1]{\pnxdy{2}{#1}{t}}
+% Partial derivation with respect to x
+\newcommand{\pdx}[1]{\pxdy{#1}{x}}
+\newcommand{\pddx}[1]{\pnxdy{2}{#1}{x}}
+% Math l
+\newcommand{\MatL}[1]{\texttt{\bf #1}}
+% Quantum Mechanics
+\newcommand{\schrodinger}{i\hbar\pdt{\Psi} = -\frac{\hbar^{2}}{2m}\pddx{\Psi} + V\Psi}
+\newcommand{\schrodingera}{i\hbar\pdt{\Psi} &= -\frac{\hbar^{2}}{2m}\pddx{\Psi} + V\Psi}
+\newcommand{\skrodinger}{Schrödinger}
+\newcommand{\Psis}{\Psi^{*}}
+\newcommand{\Psif}{\Psi (x,t)}
+\newcommand{\sandwich}[1]{\int\Psis #1\Psi\: \rmd x}
+\newcommand{\bracket}[1]{\langle #1 \rangle}
+\newcommand{\pop}{\frac{\hbar}{i}\odx{ }}
+\DeclareMathOperator\erf{erf}
+% Custom commands
+\newcommand{\unit}[1]{\:\mathrm{#1}}
+\newcommand{\noref}[1]{\hyperref[#1]{\ref*{#1}}}
+\newcommand{\nonref}[1]{\hyperref[]{\ref*{#1}}}
+\newcommand\blankpage{%
+  \null
+  \thispagestyle{empty}%
+  \addtocounter{page}{-1}%
+  \newpage}
+
+% Default fixed font does not support bold face
+\DeclareFixedFont{\ttb}{T1}{txtt}{bx}{n}{7} % for bold
+\DeclareFixedFont{\ttm}{T1}{txtt}{m}{n}{7}  % for normal
+
+\newcommand\numberthis{\addtocounter{equation}{1}\tag{\theequation}}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+\newcommand{\suba}{\left(\frac{m\omega}{\pi\hbar}\right)^{1/4}}
+\newcommand{\subxi}{\sqrt{\frac{m\omega}{\hbar}}x}
+
+\title{Prelab i bevegelsesmotstand i FYS2150} \author{Erlend Lima\\ erlenlim}
+
+% Biber for references
+\addbibresource{references.bib}
+
+\begin{document}
+\maketitle
+\rowcolors{1}{tablecolor}{tablecolor}
+\arrayrulecolor{tablerule}
+\begin{enumerate}[1.]
+\item C
+\item B
+\item B
+\item C. Fikk egentlig \(0.295\pm 0.004\) når det ble utført regressjon
+  med modellen \(\mathsf{v_{r} ~ sqrt(F_{g})}\). Uskriften var
+  \[\mathsf{fit = 
+
+
+      Linear regression model:
+      r ~ 1 + fg
+
+      Estimated Coefficients:
+      Estimate         SE         tStat       pValue  
+      __________    __________    _______    __________
+
+      (Intercept)    0.00047401    0.00047516    0.99758         0.357
+      fg                0.29536     0.0040895     72.223    4.7418e-10
+
+
+      Number of observations: 8, Error degrees of freedom: 6
+      Root Mean Squared Error: 0.000568
+      R-squared: 0.999,  Adjusted R-Squared 0.999
+      F-statistic vs. constant model: 5.22e+03, p-value = 4.74e-10}\]
+\end{enumerate}
+
+
+\end{document}

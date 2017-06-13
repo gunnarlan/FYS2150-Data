@@ -1,0 +1,9 @@
+[1] Config.pm:354> INFO - This is Biber 2.6
+[1] Config.pm:357> INFO - Logfile is 'lab_diffraksjon.blg'
+[91] biber:302> INFO - === Sun Mar 12, 2017, 21:33:22
+[119] Biber.pm:359> INFO - Reading 'lab_diffraksjon.bcf'
+[262] Biber.pm:823> INFO - Found 0 citekeys in bib section 0
+[284] Utils.pm:164> WARN - The file 'lab_diffraksjon.bcf' does not contain any citations!
+[297] bbl.pm:597> INFO - Writing 'lab_diffraksjon.bbl' with encoding 'UTF-8'
+[297] bbl.pm:701> INFO - Output to lab_diffraksjon.bbl
+[297] Biber.pm:109> INFO - WARNINGS: 1
